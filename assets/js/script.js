@@ -23,3 +23,20 @@ function desencriptar() {
 
     document.getElementById('mensajeFinal').value = textoDesencriptado;
 }
+
+// Función para verificar el contenido del textarea y mostrar el mensaje si está vacío
+function verificarTexto() {
+    const textoIngresado = document.getElementById('textoIngresado').value;
+    const mensajeVacío = document.querySelector('.textAreaVacio');
+
+    if (textoIngresado.trim() === '') {
+        mensajeVacío.style.display = 'block'; 
+    } else {
+        mensajeVacío.style.display = 'none';    }
+}
+
+// Llama a la función cuando el contenido del textarea cambia
+document.getElementById('textoIngresado').addEventListener('input', verificarTexto);
+
+// Inicializa la visibilidad del mensaje cuando se carga la página
+document.addEventListener('DOMContentLoaded', verificarTexto);

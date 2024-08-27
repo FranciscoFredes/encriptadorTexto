@@ -1,0 +1,153 @@
+/* Formateando el documento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+    background-color: #F5F5F5; 
+    
+}
+
+.logo {
+    padding: 10px;
+}
+
+.mainBox {    
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.textAreaContainer {
+    width: 100%; 
+    margin-bottom: 20px;
+    padding-right: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+aside {    
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los botones */
+.encriptarBtn, .desencriptarBtn {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.encriptarBtn {
+    background-color: #0A3871; /* Color de fondo azul */
+    color: white; 
+}
+
+.encriptarBtn:hover {
+    background-color: #2980b9;
+}
+
+.desencriptarBtn {
+    background-color: white; 
+    color: #0A3871; 
+    border: 0.5px solid #0A3871; 
+}
+
+.desencriptarBtn:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
+
+.imagenAside {
+    display: none;
+}
+.textAreaVacio{
+    text-align: center;
+    display: none;
+    padding: 10px;
+    color: #0A3871;
+}
+
+.cajaBotones {
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+footer{   
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+
+}
+/* Estilos para dispositivos móviles y tabletas */
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
+
+    aside {
+        margin-top: 20px; /* Espacio arriba del aside en móviles */
+    }
+
+    .cajaBotones {
+        flex-direction: column; /* Botones en columna en móviles */
+        gap: 10px;
+    }
+
+    textarea {
+        width: 100%; /* Ocupa el 100% del ancho en móviles */
+    }
+
+    button {
+        width: 100%; /* Botones ocupan el 100% del ancho disponible en móviles */
+    }
+}
+
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 769px) {
+    body {        
+        flex-direction: row;
+        justify-content: space-between;
+      
+    }
+
+    .mainBox {
+        height: auto;
+        width: auto;  
+        justify-content:center;      
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    
+    textarea {
+        width: 100%; /* Ocupa el 100% del ancho en móviles */
+        height: 95%;
+        
+    }
+    button {
+        width: 40%;        
+    }
+   
+
+    .imagenAside {
+        display: block; /* Muestra la imagen en pantallas grandes */
+    }
+
+    .textAreaMensajeFinal {
+        height: auto;
+    }
+}
